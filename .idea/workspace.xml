@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a0685c7-4285-4a3b-ae6c-cc20343629a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ru/butenko/task1/CostOfGasoline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/butenko/task1/CostOfGasoline.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a0685c7-4285-4a3b-ae6c-cc20343629a7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +80,11 @@
               <item name="My Home Work" type="b2602c69:ProjectViewProjectNode" />
               <item name="STC-15" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="My Home Work" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STC-15" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -117,16 +120,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554962954330</updated>
-      <workItem from="1554962959869" duration="2306000" />
+      <workItem from="1554962959869" duration="2549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2306000" />
+    <option name="totallyTimeSpent" value="2549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="816" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
