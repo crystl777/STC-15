@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a0685c7-4285-4a3b-ae6c-cc20343629a7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/butenko/task1/ClearSalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/butenko/task1/ClearSalary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/butenko/task1/CostOfGasoline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/butenko/task1/CostOfGasoline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a0685c7-4285-4a3b-ae6c-cc20343629a7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="105">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -64,9 +58,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java" />
         <option value="$PROJECT_DIR$/src/ru/butenko/task1/ClearSalary.java" />
         <option value="$PROJECT_DIR$/src/ru/butenko/task1/CostOfGasoline.java" />
+        <option value="$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java" />
       </list>
     </option>
   </component>
@@ -98,6 +92,10 @@
               <item name="STC-15" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="task1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My Home Work" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -154,15 +152,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554962954330</updated>
-      <workItem from="1554962959869" duration="5503000" />
+      <workItem from="1554962959869" duration="5636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5503000" />
+    <option name="totallyTimeSpent" value="5636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="816" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -231,8 +230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/butenko/task1/SecondToHour.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="105">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
         </state>
       </provider>
     </entry>
