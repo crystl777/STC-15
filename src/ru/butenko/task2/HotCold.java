@@ -10,11 +10,6 @@ public class HotCold {
 
     public static void main(String[] args) throws IOException {
 
-
-        Scanner scan = new Scanner(System.in);
-        String word = scan.nextLine();
-        int number = Integer.parseInt(word);
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Random rn = new Random();
         int random = rn.nextInt(100) + 1;
