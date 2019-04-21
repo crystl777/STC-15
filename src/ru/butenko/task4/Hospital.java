@@ -8,6 +8,10 @@ public class Hospital {
 
     public static void main(String[] args) {
 
+       /* не стал делать ввод с клавиатуры данных по госпиталям, докторам и пациентам. решил пока создать просто
+       объекты каждого класса
+        */
+
         AdultHospital hospital_1 = new AdultHospital("главном военном клиническом госпитале" +
                 " имени Н. Н. Бурденко");
         AdultHospital hospital_2 = new AdultHospital("госпитале для ветеранов войн №1 департамента" +
@@ -15,7 +19,6 @@ public class Hospital {
 
         ChildrenHospital childHospital_1 = new ChildrenHospital("детской городской клинической" +
                 " больнице святого Владимира");
-
 
 
         Patient patient_1 = new Patient("Алексей", "Иванов", 25, 568790,
