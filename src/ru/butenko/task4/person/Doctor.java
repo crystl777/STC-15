@@ -23,4 +23,14 @@ public class Doctor extends Person {
     protected void setLicenseNumber(int licenseNumber) {
         this.licenseNumber = licenseNumber;
     }
+
+    @Override
+    public String toString() {
+        return  "{Имя'" + super.getName()+ '\'' +
+                ", Фамилия'" + super.getLastName() + '\'' +
+                ", Возраст'" + super.getAge() + '\'' +
+                ", Номер лицензии'" + licenseNumber + '\'' +
+                ", Вид доктора'" + typeDoctor + '\'' +
+                '}';
+    }
 }

@@ -51,4 +51,14 @@ public class Person {
     public void setPassportNumber(int passportNumber) {
         this.passportNumber = passportNumber;
     }
+
+
+    @Override
+    public String toString() {
+        return "{Имя'" + name + '\'' +
+                ", Фамилия'" + lastName + '\'' +
+                ", Возраст'" + age + '\'' +
+                ", Номер паспорта'" + passportNumber + '\'' +
+                '}';
+    }
 }

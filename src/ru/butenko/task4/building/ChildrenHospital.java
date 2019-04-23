@@ -7,15 +7,15 @@ import java.util.ArrayList;
 public class ChildrenHospital {
 
     private String name;
-    private ArrayList<Person> patient = new ArrayList<>();
-    private ArrayList<Person> doctor = new ArrayList<>();
+    private ArrayList<Person> patients = new ArrayList<>();
+    private ArrayList<Person> doctors = new ArrayList<>();
 
     public ArrayList<Person> getPatient() {
-        return patient;
+        return patients;
     }
 
     public ArrayList<Person> getDoctor() {
-        return doctor;
+        return doctors;
     }
 
     public ChildrenHospital(String name) {
@@ -29,22 +29,32 @@ public class ChildrenHospital {
     public void addChildrenPatient (Person patientChild) {
 
         if (patientChild.getAge() < 18){
-            patient.add(patientChild);
+            patients.add(patientChild);
         }
         else System.out.println("Пациенту больше 18 лет, необходимо внести его в AdultHospital");
     }
 
     public void addDoctor (Person doctorHospital) {
 
-        doctor.add(doctorHospital);
+        doctors.add(doctorHospital);
     }
 
-    public int countDoctor (ChildrenHospital hospital){
+    @Override
+    public String toString() {
+        String resPat = "";
+        for (int i = 0; i < patients.size(); i++) {
+            resPat += patients.get(i) + "\n";
+        }
 
-        return hospital.getDoctor().size();
+        String resDoc = "";
+        for (int i = 0; i < doctors.size(); i++) {
+            resDoc += doctors.get(i) + "\n";
+        }
+
+        return name + "\n" + "содержит пациентов:" + "\n" + resPat +
+                "содержит докторов: " + resDoc;
+
     }
 
-    public int countPatient (ChildrenHospital hospital){
-        return hospital.getPatient().size();
-    }
+
 }
