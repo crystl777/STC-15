@@ -41,20 +41,17 @@ public class ChildrenHospital {
 
     @Override
     public String toString() {
-        String resPat = "";
-        for (int i = 0; i < patients.size(); i++) {
-            resPat += patients.get(i) + "\n";
+        StringBuilder sb = new StringBuilder();
+        sb.append(name).append("\n").append("содержит пациентов: ").append("\n");
+
+        for (Person patient : patients) {
+            sb.append(patient).append("\n");
         }
-
-        String resDoc = "";
-        for (int i = 0; i < doctors.size(); i++) {
-            resDoc += doctors.get(i) + "\n";
+        sb.append("содержит докторов: ").append("\n");
+        for (Person doctor : doctors) {
+            sb.append(doctor).append("\n");
         }
-
-        return name + "\n" + "содержит пациентов:" + "\n" + resPat +
-                "содержит докторов: " + resDoc;
-
+        return sb.toString();
     }
-
-
 }
+

@@ -11,11 +11,11 @@ public class Hospital {
        /* TODO не стал делать ввод с клавиатуры данных по госпиталям, докторам и пациентам. решил пока создать просто
        объекты каждого класса
 
-
-
-       TODO уже после создание классов AdultHospital и ChildrenHospital понял, что нужно было бы создать один
-       родителький класс, и расширить его этими двумя
+       Решил не делать один общий родительский класс для AdultHospital и ChildrenHospital, так как хотел
+       попробовать разные варианты переопределения toString
         */
+
+
 
         AdultHospital hospital_1 = new AdultHospital("Главный военный клинический госпиталь" +
                 " имени Н. Н. Бурденко");
@@ -29,7 +29,7 @@ public class Hospital {
         Patient patient_1 = new Patient("Алексей", "Иванов", 25, 568790,
                 "ОРВИ");
 
-        Patient patient_2 = new Patient("Владимир", "Петров", 34, 983209,
+        Patient patient_2 = new Patient("Владимир", "Петров", 38, 983209,
                 "Пищевая интоксикация");
 
         Patient patient_3 = new Patient("Николай", "Семёнов", 16, 658712,
@@ -55,7 +55,6 @@ public class Hospital {
        System.out.println(hospital_1.toString());
        System.out.println(hospital_2.toString());
        System.out.println(childHospital_1);
-
 
     }
 }
