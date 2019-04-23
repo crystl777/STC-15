@@ -8,11 +8,12 @@ public class Hospital {
 
     public static void main(String[] args) {
 
-       /* не стал делать ввод с клавиатуры данных по госпиталям, докторам и пациентам. решил пока создать просто
+       /* TODO не стал делать ввод с клавиатуры данных по госпиталям, докторам и пациентам. решил пока создать просто
        объекты каждого класса
-        */
 
-       /* уже после создание классов AdultHospital и ChildrenHospital понял, что проще было бы создать один
+
+
+       TODO уже после создание классов AdultHospital и ChildrenHospital понял, что нужно было бы создать один
        родителький класс, и расширить его этими двумя
         */
 
@@ -51,9 +52,9 @@ public class Hospital {
        childHospital_1.addChildrenPatient(patient_3);
        childHospital_1.addDoctor(doctor_3);
 
-        System.out.println(hospital_1.toString());
-        System.out.println(hospital_2.toString());
-        System.out.println(childHospital_1);
+       System.out.println(hospital_1.toString());
+       System.out.println(hospital_2.toString());
+       System.out.println(childHospital_1);
 
 
     }
