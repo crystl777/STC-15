@@ -15,6 +15,7 @@ public class Main {
 
         Vending.checkAge();
         Vending vend = new Vending(Vending.createMap(Keys.createKeys(), Drinks.createGoods()));
+        vend.menu();
         vend.getGood(vend.key());
     }
 }
