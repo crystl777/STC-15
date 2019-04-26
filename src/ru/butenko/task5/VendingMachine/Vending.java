@@ -60,8 +60,10 @@ public class Vending {
             if (drink.getCost() > money) {
                 System.out.println("Недостаточно денег");
                 continue;
-            } else System.out.println("Получите Ваш напиток!");
-            break;
+            } else if (drink.getCost() < money){
+                System.out.println("Получите Ваш напиток и сдачу в размере: " + (money - drink.getCost()));
+                break;}
+            else System.out.println("Получите Ваш напиток!");
         }
     }
 
