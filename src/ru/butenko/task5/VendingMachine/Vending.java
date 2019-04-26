@@ -67,9 +67,18 @@ public class Vending {
 
     public Enum key() throws IOException {
         System.out.println("Выберите товар, нажав соответствующую кнопку");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        return Keys.valueOf(s);
+        while (true){
+            try {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                String s = reader.readLine().toUpperCase();
+                return Keys.valueOf(s);
+            }
+            catch (Exception e){
+                System.out.println("Такой кнопки не существует! Попробуйте ещё раз!");
+            }
+
+        }
+
     }
 
 
@@ -90,7 +99,7 @@ public class Vending {
                 "\n" +
                 "╦╗ ╗ ─ ╦╗ ╔╗ ╔╗ ║║ ╦╗ ║║ ─ ╗ ╔╗ ╔╗ \n" +
                 "╠╣ ║ ─ ╠╣ ╠╝ ╠╣ ╬║ ║║ ╚╣ ─ ║ ╔╝ ║║ \n" +
-                "╩╝ ╩ ─ ╩╝ ╠╗ ║║ ║╬ ╩╝ ═╝ ─ ╩ ║─ ╚╝ \n" +
+                "╩╝ ╩ ─ ╩╝ ╠╗ ║║ ║╬ ╩╝ ═╝ ─ ╩ ║  ╚╝ \n" +
                 "\n" +
                 "╦╗ ╔╗ ─ ║╦║ ║║ ╦ ╔╗ ║╔ ╔═ ║║ ─ ╔╗ ╔╗ ╔╗\n"  +
                 "╠╣ ╔╝ ─ ║║║ ╠╣ ║ ╚╗ ╠╣ ╠═ ╚╣ ─ ╔╝ ║║ ║║ \n" +
