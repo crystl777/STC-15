@@ -4,10 +4,6 @@ public class Patient extends Person {
 
     private String typeDisease;
 
-    public Patient(String name, String lastName, int age, int passportNumber) {
-        super(name, lastName, age, passportNumber);
-    }
-
     public Patient(String name, String lastName, int age, int passportNumber, String typeDisease) {
         super(name, lastName, age, passportNumber);
         this.typeDisease = typeDisease;
@@ -16,6 +12,5 @@ public class Patient extends Person {
     public String getTypeDisease() {
         return typeDisease;
     }
-
 
 }

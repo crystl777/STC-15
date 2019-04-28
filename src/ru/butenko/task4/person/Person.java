@@ -1,6 +1,6 @@
 package ru.butenko.task4.person;
 
-public class Person {
+public abstract class Person {
 
     private String name;
     private String lastName;
