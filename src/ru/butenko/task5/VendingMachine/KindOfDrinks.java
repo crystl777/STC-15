@@ -6,6 +6,7 @@ public enum KindOfDrinks {
 
 
     int cost;
+
     KindOfDrinks(int cost){
         this.cost = cost;
     }
