@@ -13,9 +13,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Vending vending = new Vending(Vending.createMap(), 3);
+        Vending vending = new Vending(Vending.createMap(), 2);
 
-        vending.getGoods(vending.getHashMap());
-
+        vending.getGoods();
     }
 }
