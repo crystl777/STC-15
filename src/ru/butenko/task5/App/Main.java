@@ -13,9 +13,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Vending.checkAge();
-        Vending vend = new Vending(Vending.createMap(Keys.createKeys(), Drinks.createGoods()));
-        vend.menu();
-        vend.getGood(vend.key());
+        Vending vending = new Vending(Vending.createMap(), 3);
+
+        vending.getGoods(vending.getHashMap());
+
     }
 }

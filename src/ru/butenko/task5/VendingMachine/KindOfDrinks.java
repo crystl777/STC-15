@@ -2,7 +2,7 @@ package ru.butenko.task5.VendingMachine;
 
 public enum KindOfDrinks {
 
-    VODKA(100), GIN (140), TEQUILA(111), BRANDY(333), WHISKEY(444);
+    VODKA(100), GIN (160), TEQUILA(180), BRANDY(170), WHISKEY(200);
 
 
     int cost;
