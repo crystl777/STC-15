@@ -104,3 +104,20 @@ java.lang.NumberFormatException: For input string: "wfegh"
 	at java.lang.Integer.parseInt(Integer.java:615)
 	at ru.butenko.task5.VendingMachine.Vending.getGood(Vending.java:119)
 	at ru.butenko.task5.App.Main.main(Main.java:24)
+2019-05-19 21:03:29,632 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 21:03:29,640 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 21:03:33,553 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 21:03:37,386 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 21:03:42,319 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 21:04:03,836 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 21:04:03,847 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 21:04:05,460 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 21:04:07,450 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 21:04:17,217 [ERROR][main ][task5.VendingMachine.Vending] - For input string: "dftb"
+java.lang.NumberFormatException: For input string: "dftb"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ru.butenko.task5.VendingMachine.Vending.getGood(Vending.java:118)
+	at ru.butenko.task5.App.Main.main(Main.java:24)
+2019-05-19 21:04:21,269 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста

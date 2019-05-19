@@ -110,7 +110,6 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
         KindOfDrinks good = getGoodsList().get(Keys.valueOf(Vending.getKeys()));
         while (true) {
             System.out.println("Внесите деньги!");
@@ -131,7 +130,6 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
                     break;
                 } else {
                     System.out.println("Вы ввели отрицательное число!");
-                    return;
                 }
             } catch (NumberFormatException e) {
 //TODO   добавил логгер на случай некорректного ввода значения денег
