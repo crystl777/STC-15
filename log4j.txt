@@ -62,3 +62,45 @@ java.lang.NumberFormatException: For input string: "avsesre"
 	at ru.butenko.task5.VendingMachine.Vending.getGoods(Vending.java:109)
 	at ru.butenko.task5.App.Main.main(Main.java:20)
 2019-05-17 11:59:47,820 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:03:53,799 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:03:53,806 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:03:58,340 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:04:05,950 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:04:47,935 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:04:47,943 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:04:50,312 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:04:53,943 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:10:41,547 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:10:41,559 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:10:43,523 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:10:49,281 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:10:51,280 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:10:53,189 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:10:56,619 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:57:04,741 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:57:04,750 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:57:11,984 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:57:15,930 [ERROR][main ][task5.VendingMachine.Vending] - No enum constant ru.butenko.task5.VendingMachine.Keys.DFRHT
+java.lang.IllegalArgumentException: No enum constant ru.butenko.task5.VendingMachine.Keys.DFRHT
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at ru.butenko.task5.VendingMachine.Keys.valueOf(Keys.java:3)
+	at ru.butenko.task5.VendingMachine.Vending.keyOfGood(Vending.java:95)
+	at ru.butenko.task5.App.Main.main(Main.java:23)
+2019-05-19 20:57:21,153 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:57:24,028 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:58:56,048 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:58:56,056 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:58:57,668 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:59:00,153 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:59:04,035 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:59:22,642 [INFO ][main ][task5.App.Main] - Начало работы программы
+2019-05-19 20:59:22,646 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода проверки возраста
+2019-05-19 20:59:24,441 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выбора кнопки
+2019-05-19 20:59:26,730 [INFO ][main ][task5.VendingMachine.Vending] - Запуск метода выдачи товара
+2019-05-19 20:59:33,038 [ERROR][main ][task5.VendingMachine.Vending] - For input string: "wfegh"
+java.lang.NumberFormatException: For input string: "wfegh"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at ru.butenko.task5.VendingMachine.Vending.getGood(Vending.java:119)
+	at ru.butenko.task5.App.Main.main(Main.java:24)

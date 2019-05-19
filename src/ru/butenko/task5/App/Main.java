@@ -15,6 +15,16 @@ public class Main {
 
         Vending vending = new Vending(Vending.createMap(), 2);
 
-        vending.getGoods();
+        int count = vending.getCount();
+
+        while (count > 0) {
+            Vending.checkAge();
+            Vending.menu();
+            Vending.keyOfGood();
+            vending.getGood();
+
+            count--;
+        }
+        Vending.vendingEmpty();
     }
 }

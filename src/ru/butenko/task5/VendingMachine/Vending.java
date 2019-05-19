@@ -16,6 +16,15 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
     private HashMap<Keys, KindOfDrinks> goodsList;
     private int count;
+    private static String keys;
+
+    public static String getKeys() {
+        return keys;
+    }
+
+    public static void setKeys(String keys) {
+        Vending.keys = keys;
+    }
 
     public int getCount() {
         return count;
@@ -73,40 +82,43 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
 
 
-    public void getGoods() throws IOException {
+    public static void keyOfGood() throws IOException {
 
-        logger.info("Запуск метода вноса денег и выдачи товара");
+        logger.info("Запуск метода выбора кнопки");
 
-
-        String keys;
-        int count = getCount();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        while(count > 0) {
-            Vending.checkAge();
-            Vending.menu();
-
-            while (true) {
-                System.out.println("Выберите товар, нажав соответствующую кнопку");
-                try {
-
-                    keys = reader.readLine().toUpperCase();
-                    Keys.valueOf(keys);
-                    break;
-                } catch (IllegalArgumentException e) {
+        while (true) {
+            System.out.println("Выберите товар, нажав соответствующую кнопку");
+            try {
+                Vending.setKeys(reader.readLine().toUpperCase());
+                Keys.valueOf(Vending.getKeys());
+                break;
+            } catch (IllegalArgumentException e) {
 //TODO   добавил логгер на случай некорректного ввода кнопки
-                    logger.error(e.getMessage(), e);
-                    System.out.println("Такой кнопки не существует! Попробуйте ещё раз!");
-                }
-
+                logger.error(e.getMessage(), e);
+                System.out.println("Такой кнопки не существует! Попробуйте ещё раз!");
             }
 
-            KindOfDrinks good = getGoodsList().get(Keys.valueOf(keys));
-            while (true) {
-                System.out.println("Внесите деньги!");
+        }
+    }
 
-                try {
-                    int money = Integer.parseInt(reader.readLine());
+
+    public void getGood() throws IOException {
+
+        logger.info("Запуск метода выдачи товара");
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+
+        KindOfDrinks good = getGoodsList().get(Keys.valueOf(Vending.getKeys()));
+        while (true) {
+            System.out.println("Внесите деньги!");
+
+            try {
+                int money = Integer.parseInt(reader.readLine());
+
+                if (money > 0) {
 
                     if (good.getCost() > money) {
                         System.out.println("Недостаточно денег");
@@ -117,16 +129,21 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
                     } else System.out.println("Получите Ваш напиток!");
                     setCount(getCount() - 1);
                     break;
-                } catch (NumberFormatException e) {
-//TODO   добавил логгер на случай некорректного ввода значения денег
-                    //TODO отриц число
-                    logger.error(e.getMessage(), e);
-                    System.out.println("Введённый формат данных не поддерживается! Попробуйте ещё раз.");
+                } else {
+                    System.out.println("Вы ввели отрицательное число!");
+                    return;
                 }
+            } catch (NumberFormatException e) {
+//TODO   добавил логгер на случай некорректного ввода значения денег
+                logger.error(e.getMessage(), e);
+                System.out.println("Введённый формат данных не поддерживается! Попробуйте ещё раз.");
             }
-            count--;
-
         }
+    }
+
+
+    public static void vendingEmpty() {
+
         System.out.println("" +
                 "████████████████████████████████████\n" +
                 "█────█────██───█────█─███─█────█───█\n" +
@@ -166,7 +183,7 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
     }
 
-    public static void menu(){
+    public static void menu() {
         System.out.println("" +
                 "" +
                 "╔╗ ╗ ─ ╗╔ ╔╗ ╦╗ ║╔ ╔╗ ─ ─ ╗ ╔╗ ╔╗ \n" +
@@ -179,13 +196,13 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
                 "\n" +
                 "╔╗ ═╗ ─ ╦ ╔═ ╔╗ ╔╗╔╗ ╦ ║ ╔╗ ─ ╗ ╔╗ ╔╗ \n" +
                 "╠╣ ═╣ ─ ║ ╠═ ║║ ║║║║ ║ ║ ╠╣ ─ ║ ╠╣ ║║ \n" +
-                "║║ ═╝ ─ ║ ╚═ ╚╬ ╚══╝ ╩ ╚ ║║ ─ ╩ ╚╝ ╚╝ \n"+
+                "║║ ═╝ ─ ║ ╚═ ╚╬ ╚══╝ ╩ ╚ ║║ ─ ╩ ╚╝ ╚╝ \n" +
                 "\n" +
                 "╦╗ ╗ ─ ╦╗ ╔╗ ╔╗ ║║ ╦╗ ║║ ─ ╗ ╔╗ ╔╗ \n" +
                 "╠╣ ║ ─ ╠╣ ╠╝ ╠╣ ╬║ ║║ ╚╣ ─ ║ ╔╝ ║║ \n" +
                 "╩╝ ╩ ─ ╩╝ ╠╗ ║║ ║╬ ╩╝ ═╝ ─ ╩ ║  ╚╝ \n" +
                 "\n" +
-                "╦╗ ╔╗ ─ ║╦║ ║║ ╦ ╔╗ ║╔ ╔═ ║║ ─ ╔╗ ╔╗ ╔╗\n"  +
+                "╦╗ ╔╗ ─ ║╦║ ║║ ╦ ╔╗ ║╔ ╔═ ║║ ─ ╔╗ ╔╗ ╔╗\n" +
                 "╠╣ ╔╝ ─ ║║║ ╠╣ ║ ╚╗ ╠╣ ╠═ ╚╣ ─ ╔╝ ║║ ║║ \n" +
                 "╩╝ ╚═ ─ ╚╩╝ ║║ ╩ ╚╝ ║╚ ╚═ ═╝ ─ ╚═ ╚╝ ╚╝\n");
 
