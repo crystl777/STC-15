@@ -113,13 +113,13 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
                         continue;
                     } else if (good.getCost() < money) {
                         System.out.println("Получите Ваш напиток и сдачу в размере: " + (money - good.getCost()));
-
                         break;
                     } else System.out.println("Получите Ваш напиток!");
                     setCount(getCount() - 1);
                     break;
                 } catch (NumberFormatException e) {
 //TODO   добавил логгер на случай некорректного ввода значения денег
+                    //TODO отриц число
                     logger.error(e.getMessage(), e);
                     System.out.println("Введённый формат данных не поддерживается! Попробуйте ещё раз.");
                 }
