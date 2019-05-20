@@ -20,8 +20,8 @@ public class Main {
         while (count > 0) {
             Vending.checkAge();
             Vending.menu();
-            Vending.keyOfGood();
-            vending.getGood();
+            vending.keyOfGood(vending);
+            vending.getGood(vending);
 
             count--;
         }

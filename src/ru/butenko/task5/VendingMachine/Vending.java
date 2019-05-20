@@ -16,14 +16,14 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
     private HashMap<Keys, KindOfDrinks> goodsList;
     private int count;
-    private static String keys;
+    private String keys;
 
-    public static String getKeys() {
+    public String getKeys() {
         return keys;
     }
 
-    public static void setKeys(String keys) {
-        Vending.keys = keys;
+    public void setKeys(String keys) {
+        this.keys = keys;
     }
 
     public int getCount() {
@@ -82,7 +82,7 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
 
 
 
-    public static void keyOfGood() throws IOException {
+    public void keyOfGood(Vending vending) throws IOException {
 
         logger.info("Запуск метода выбора кнопки");
 
@@ -91,8 +91,8 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
         while (true) {
             System.out.println("Выберите товар, нажав соответствующую кнопку");
             try {
-                Vending.setKeys(reader.readLine().toUpperCase());
-                Keys.valueOf(Vending.getKeys());
+                vending.setKeys(reader.readLine().toUpperCase());
+                Keys.valueOf(vending.getKeys());
                 break;
             } catch (IllegalArgumentException e) {
 //TODO   добавил логгер на случай некорректного ввода кнопки
@@ -104,13 +104,13 @@ private static final Logger logger = LoggerFactory.getLogger(Vending.class.getNa
     }
 
 
-    public void getGood() throws IOException {
+    public void getGood(Vending vending) throws IOException {
 
         logger.info("Запуск метода выдачи товара");
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        KindOfDrinks good = getGoodsList().get(Keys.valueOf(Vending.getKeys()));
+        KindOfDrinks good = getGoodsList().get(Keys.valueOf(vending.getKeys()));
         while (true) {
             System.out.println("Внесите деньги!");
 
