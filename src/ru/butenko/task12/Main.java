@@ -33,6 +33,7 @@ public class Main {
         //сохраняем библиотеку в бинарный файл
         Library.saveLibrary(library, Library.directory);
 
+        //работаем с библиотекой (сколько книг / что за книги)
         Library.workWithLibrary(Library.directory);
 
     }
