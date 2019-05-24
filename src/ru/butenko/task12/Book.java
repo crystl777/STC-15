@@ -3,8 +3,9 @@ package ru.butenko.task12;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 
-public class Book {
+public class Book implements Serializable {
 
     private String nameOfBook;
     private String authorOfBook;
