@@ -115,37 +115,43 @@ public class Library implements Serializable {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Чтобы посмотреть количество книг в библиотеке - введите 1");
-        System.out.println("Чтобы посмотреть данные по книгам в библиотеке - введите 2");
+        while (true) {
 
-        String choice = reader.readLine();
+            System.out.println("Чтобы посмотреть количество книг в библиотеке - введите 1");
+            System.out.println("Чтобы посмотреть данные по книгам в библиотеке - введите 2");
 
-        if (choice.equals("1")) {
-            System.out.println(
-                    Library.chechBookFromLibrary(resources).
-                            getLibrary().
-                            size());
+            String choice = reader.readLine();
 
-        } else if (choice.equals("2")) {
-
-            int size = Library.chechBookFromLibrary(resources).
-                    getLibrary().
-                    size();
-
-            for (int i = 0; i < size; i++) {
-                System.out.println("Название книги № " + i + 1 + " " +
+            if (choice.equals("1")) {
+                System.out.println(
                         Library.chechBookFromLibrary(resources).
-                                getLibrary().get(i).getNameOfBook());
-                System.out.println("Автор книги № " + i + 1 + " " +
-                        Library.chechBookFromLibrary(resources).
-                                getLibrary().get(i).getAuthorOfBook());
-                System.out.println("Год издания книги № " + i + 1 + " " +
-                        Library.chechBookFromLibrary(resources).
-                                getLibrary().get(i).getYearOfPublishing());
+                                getLibrary().
+                                size());
+                break;
 
+            } else if (choice.equals("2")) {
+
+                int size = Library.chechBookFromLibrary(resources).
+                        getLibrary().
+                        size();
+
+                for (int i = 0; i < size; i++) {
+                    System.out.println("Название книги № " + i + 1 + " " +
+                            Library.chechBookFromLibrary(resources).
+                                    getLibrary().get(i).getNameOfBook());
+                    System.out.println("Автор книги № " + i + 1 + " " +
+                            Library.chechBookFromLibrary(resources).
+                                    getLibrary().get(i).getAuthorOfBook());
+                    System.out.println("Год издания книги № " + i + 1 + " " +
+                            Library.chechBookFromLibrary(resources).
+                                    getLibrary().get(i).getYearOfPublishing());
+
+                }
+                break;
+            } else {
+                System.out.println("Вы ввели некорректное значение");
+                continue;
             }
-        } else {
-            System.out.println("Вы ввели некорректное значение");
         }
     }
 }
