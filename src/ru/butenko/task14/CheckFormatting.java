@@ -12,10 +12,11 @@ public interface CheckFormatting {
              Scanner sc = new Scanner(fr);
              FileWriter fw = new FileWriter(destination)) {
 
-            String title = String.format("%-10s %10s %10s %16s %n", "Наименование", "Цена", "Кол-во", "Стоимость");
+            String title = String.format("%-18s %-12s %-10s %12s %n", "Наименование", "Цена", "Кол-во", "Стоимость");
+            float total = 0;
 
             StringBuilder separator = new StringBuilder("=");
-            for (int i = 0; i < 99; i++) {
+            for (int i = 0; i < 130; i++) {
                 separator.append("=");
                 i++;
             }
@@ -28,12 +29,15 @@ public interface CheckFormatting {
 
                 float quantity = sc.nextFloat();
                 float price = sc.nextFloat();
+                total += quantity * price;
                 sc.nextLine();
 
-                String text = String.format("%-18s %-4.2f x %5.2f %10s %.2f %n",
+                String text = String.format("%-18s %-10.2f x %-10.2f %2s %-10.2f %n",
                         nameOfGoog, price, quantity, "=", quantity * price);
                 fw.write(text);
             }
+            String totalText = String.format("%-45s %-10.2f", "Итого", total);
+            fw.write((separator + "\n") + totalText);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InputMismatchException e) {
