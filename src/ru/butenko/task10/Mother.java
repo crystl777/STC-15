@@ -18,7 +18,7 @@ public class Mother {
             try {
                 String food = reader.readLine().toUpperCase();
                 try {
-                    son.сhildEating(Food.valueOf(food));
+                    son.eat(Food.valueOf(food));
                 } catch (FoodException e) {
                     System.out.println(e.getMessage());
                 }

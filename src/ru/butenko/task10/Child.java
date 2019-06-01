@@ -2,7 +2,7 @@ package ru.butenko.task10;
 
 public class Child {
 
-    public  void сhildEating(Food food) throws FoodException {
+    public  void eat(Food food) throws FoodException {
 
         double random = Math.random();
 

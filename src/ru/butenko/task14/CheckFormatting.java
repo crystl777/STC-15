@@ -29,6 +29,7 @@ public interface CheckFormatting {
 
                 float quantity = sc.nextFloat();
                 float price = sc.nextFloat();
+
                 total += quantity * price;
                 sc.nextLine();
 
