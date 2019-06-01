@@ -38,7 +38,7 @@ public class ShiftElementsOfMassive {
         }
     }
 
-    public static void printArray(int[][] array){
+    public static void printArray(int[][] array) {
         System.out.println("--------------------------");
 
         for (int i = 0; i < array.length; i++) {
@@ -49,7 +49,7 @@ public class ShiftElementsOfMassive {
         }
     }
 
-    public static void swap(int[][] array, int i, int j){
+    public static void swap(int[][] array, int i, int j) {
         int tmp = array[i][j];
         array[i][j] = array[i][j + 1];
         array[i][j + 1] = tmp;
