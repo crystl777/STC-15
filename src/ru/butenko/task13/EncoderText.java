@@ -52,7 +52,6 @@ public class EncoderText {
              OutputStreamWriter osw = new OutputStreamWriter(Files.newOutputStream(newEncoderPath),
                      StandardCharsets.US_ASCII)) {
 
-
             while (isr.ready()) {
                 osw.write(isr.read());
             }
