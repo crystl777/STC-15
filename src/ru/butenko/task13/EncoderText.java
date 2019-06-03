@@ -12,9 +12,14 @@ public class EncoderText {
 
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        Path path = Paths.get("src/ru/butenko/task13/utf-8.txt");
+
+        System.out.println("Введите директорию исходного файла для записи");
+        String directory = reader.readLine();
+        //Path path = Paths.get("src/ru/butenko/task13/utf-8.txt");
+        Path path = Paths.get(directory);
 
         try (OutputStream os = Files.newOutputStream(path)) {
+            System.out.println("Введите текст");
             String text = reader.readLine();
             os.write(text.getBytes());
         }
@@ -22,16 +27,36 @@ public class EncoderText {
         //здесь я просто решил посмотреть размер полученного выше файла
         System.out.println(Files.size(path));
 
-        Path newEncoderPath = Paths.get("src/ru/butenko/task13/ascii.txt");
+
+        System.out.println("Введите директорию для перекодированного файла");
+        //Path newEncoderPath = Paths.get("src/ru/butenko/task13/ascii.txt");
+        String encoderDirectory = reader.readLine();
+        Path newEncoderPath = Paths.get(encoderDirectory);
+
+        /*
         try (InputStream is = Files.newInputStream(path);
              OutputStream os = Files.newOutputStream(newEncoderPath)) {
 
             byte[] buf = Files.readAllBytes(path);
 
-            if (is.read(buf) != -1) {
+            while (is.read(buf) != -1) {
+
                 String text = new String(buf, StandardCharsets.US_ASCII);
                 os.write(text.getBytes());
             }
         }
+
+         */
+
+        try (InputStreamReader isr = new InputStreamReader(Files.newInputStream(path));
+             OutputStreamWriter osw = new OutputStreamWriter(Files.newOutputStream(newEncoderPath),
+                     StandardCharsets.US_ASCII)) {
+
+
+            while (isr.ready()) {
+                osw.write(isr.read());
+            }
+        }
     }
 }
+

@@ -16,7 +16,9 @@ public class Recursion {
         new File("src/ru/butenko/task11/dirA/dirB/b.txt").createNewFile();
 
         recursiveBypass(new File("src/ru/butenko/task11/dirA"));
+        System.out.println(recusionDepth(file));
         recursiveChangeName(new File("src/ru/butenko/task11/dirA"), Recursion.recusionDepth(file));
+        printDirectory(file, recusionDepth(file));
     }
 
     //рекурсивный обход всех файлов и подкаталогов внутри заданного каталога
@@ -64,6 +66,18 @@ public class Recursion {
                 recursiveChangeName(newFile, recursionDepth + 1);
             } else {
                 System.out.println(file.renameTo(newFile));
+            }
+        }
+    }
+
+    private static void printDirectory(File dir, int depth) {
+        String pad = "";
+        for (int i = 0; i < depth; i++){
+            pad += "Х";}
+        for (File file : dir.listFiles()) {
+            System.out.println(pad + file.getName());
+            if (file.isDirectory()) {
+                printDirectory(file, depth + 1);
             }
         }
     }
