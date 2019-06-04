@@ -4,7 +4,7 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class ShoppingList implements CheckFormatting {
+public class ShoppingList {
 
     private Path path;
 
@@ -52,8 +52,8 @@ public class ShoppingList implements CheckFormatting {
                     }
                 }
             }
-
         } catch (IOException e) {
+            System.out.println("Вы ввели некорректные данные при создании создании списка покупок");
             e.printStackTrace();
         }
     }
