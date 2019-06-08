@@ -33,7 +33,7 @@ public class BasketShop implements Basket {
         } catch (IOException e) {
             e.getMessage();
             e.printStackTrace();
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.getStackTrace();
             System.out.println("Вы ввели некорректные данные");
         }
@@ -42,7 +42,6 @@ public class BasketShop implements Basket {
 
     @Override
     public void addProduct(String product, int quantity) {
-
         for (int i = 0; i < quantity; i++) {
             getProducts().add(product);
         }
@@ -51,14 +50,11 @@ public class BasketShop implements Basket {
 
     @Override
     public void removeProduct(String product) {
-
         getProducts().remove(product);
     }
 
     @Override
     public void updateProductQuantity(String product, int quantity) {
-
-
         if (getProducts().contains(product)) {
             int size = getProducts().size();
 
@@ -80,7 +76,7 @@ public class BasketShop implements Basket {
 
     @Override
     public void clear() {
-       getProducts().clear();
+        getProducts().clear();
     }
 
     @Override
@@ -92,11 +88,11 @@ public class BasketShop implements Basket {
     public int getProductQuantity(String product) {
         int productQuantity = 0;
         for (int i = 0; i < getProducts().size(); i++) {
-            if(product.equals(getProducts().get(i))){
+            if (product.equals(getProducts().get(i))) {
                 productQuantity++;
             }
         }
-        if (productQuantity == 0){
+        if (productQuantity == 0) {
             System.out.println("Такого товара в корзине нет : (");
         }
         return productQuantity;

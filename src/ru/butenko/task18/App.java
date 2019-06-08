@@ -8,18 +8,6 @@ public class App {
 
     public static void main(String[] args) {
 
-
-/*
-        BasketShop basketShop = new BasketShop();
-        basketShop.addProduct("good 1", 3);
-        basketShop.addProduct("good 1 ", 2);
-        basketShop.addProduct("good 3", 1);
-        basketShop.addProduct("good 2", 1);
-
-        System.out.println(basketShop.getProducts());
-
-
- */
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BasketShop basketShop = new BasketShop();
 
@@ -45,7 +33,6 @@ public class App {
             }
         }
 
-
         System.out.println("смотрим, какие товары есть в корзине");
         System.out.println(basketShop.getProducts());
         System.out.println("----------------------");
@@ -66,7 +53,5 @@ public class App {
         basketShop.clear();
         System.out.println("... и выводим содержимое корзины ещё раз :");
         System.out.println(basketShop.getProducts());
-
-
     }
 }
