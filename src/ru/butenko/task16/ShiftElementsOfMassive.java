@@ -50,6 +50,7 @@ public class ShiftElementsOfMassive {
     }
 
     public static void swap(int[][] array, int i, int j) {
+
         int tmp = array[i][j];
         array[i][j] = array[i][j + 1];
         array[i][j + 1] = tmp;

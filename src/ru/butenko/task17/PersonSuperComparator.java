@@ -1,6 +1,6 @@
 package ru.butenko.task17;
 
-import java.util.Comparator;
+        import java.util.Comparator;
 
 public class PersonSuperComparator implements Comparator<Person> {
     @Override

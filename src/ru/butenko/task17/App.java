@@ -1,8 +1,8 @@
 package ru.butenko.task17;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.Collections;
+        import java.util.List;
 
 public class App {
 
@@ -13,6 +13,7 @@ public class App {
         personList.add(new Person("Артём", 21));
         personList.add(new Person("Ксения", 54));
         personList.add(new Person("Владимир", 63));
+
 
         System.out.println(personList);
 
