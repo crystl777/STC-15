@@ -33,6 +33,7 @@ public class EncoderText {
         String encoderDirectory = reader.readLine();
         Path newEncoderPath = Paths.get(encoderDirectory);
 
+
         /*
         try (InputStream is = Files.newInputStream(path);
              OutputStream os = Files.newOutputStream(newEncoderPath)) {

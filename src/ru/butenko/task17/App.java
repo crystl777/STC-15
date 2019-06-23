@@ -1,8 +1,9 @@
 package ru.butenko.task17;
 
-        import java.util.ArrayList;
-        import java.util.Collections;
-        import java.util.List;
+import java.util.ArrayList;
+
+import java.util.Comparator;
+import java.util.List;
 
 public class App {
 
@@ -17,7 +18,9 @@ public class App {
 
         System.out.println(personList);
 
-        Collections.sort(personList, new PersonSuperComparator());
+        personList
+                .sort(Comparator.comparing(Person::getName)
+                        .thenComparingInt(Person::getAge));
 
         System.out.println(personList);
 
